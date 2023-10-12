@@ -36,7 +36,7 @@ module.exports = function tenantProfile (sequelize, DataTypes)  {
         type: DataTypes.STRING,
         allowNull: false,
       },
-      weburl: {
+      webUrl: {
         type: DataTypes.STRING,
         allowNull: true,
       },
@@ -44,5 +44,6 @@ module.exports = function tenantProfile (sequelize, DataTypes)  {
     {
       sequelize,
       tableName: "tenant_profiles",
+      underscored: true
     })
 };

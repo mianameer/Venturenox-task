@@ -1,0 +1,153 @@
+{
+    "tables": {
+        "tenant_profiles": {
+            "tableName": "tenant_profiles",
+            "schema": {
+                "id": {
+                    "autoIncrement": true,
+                    "allowNull": true,
+                    "primaryKey": true,
+                    "field": "id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "tenantName": {
+                    "allowNull": false,
+                    "field": "tenant_name",
+                    "seqType": "Sequelize.STRING"
+                },
+                "address": {
+                    "allowNull": false,
+                    "field": "address",
+                    "seqType": "Sequelize.STRING"
+                },
+                "city": {
+                    "allowNull": false,
+                    "field": "city",
+                    "seqType": "Sequelize.STRING"
+                },
+                "state": {
+                    "allowNull": false,
+                    "field": "state",
+                    "seqType": "Sequelize.STRING"
+                },
+                "country": {
+                    "allowNull": false,
+                    "field": "country",
+                    "seqType": "Sequelize.STRING"
+                },
+                "zipCode": {
+                    "allowNull": true,
+                    "field": "zip_code",
+                    "seqType": "Sequelize.STRING"
+                },
+                "phone": {
+                    "allowNull": false,
+                    "field": "phone",
+                    "seqType": "Sequelize.STRING"
+                },
+                "webUrl": {
+                    "allowNull": true,
+                    "field": "web_url",
+                    "seqType": "Sequelize.STRING"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "created_at",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updated_at",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        },
+        "user_profiles": {
+            "tableName": "user_profiles",
+            "schema": {
+                "id": {
+                    "autoIncrement": true,
+                    "allowNull": true,
+                    "primaryKey": true,
+                    "field": "id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "firstName": {
+                    "allowNull": false,
+                    "field": "first_name",
+                    "seqType": "Sequelize.STRING"
+                },
+                "lastName": {
+                    "allowNull": false,
+                    "field": "last_name",
+                    "seqType": "Sequelize.STRING"
+                },
+                "department": {
+                    "allowNull": false,
+                    "field": "department",
+                    "seqType": "Sequelize.STRING"
+                },
+                "designation": {
+                    "allowNull": false,
+                    "field": "designation",
+                    "seqType": "Sequelize.STRING"
+                },
+                "tenantId": {
+                    "allowNull": false,
+                    "references": {
+                        "model": "TenantProfile",
+                        "key": "id"
+                    },
+                    "field": "tenant_id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "imageUrl": {
+                    "allowNull": true,
+                    "field": "image_url",
+                    "seqType": "Sequelize.STRING"
+                },
+                "city": {
+                    "allowNull": false,
+                    "field": "city",
+                    "seqType": "Sequelize.STRING"
+                },
+                "country": {
+                    "allowNull": true,
+                    "field": "country",
+                    "seqType": "Sequelize.STRING"
+                },
+                "bio": {
+                    "allowNull": true,
+                    "field": "bio",
+                    "seqType": "Sequelize.STRING"
+                },
+                "socialLinks": {
+                    "allowNull": true,
+                    "field": "social_links",
+                    "seqType": "Sequelize.JSON"
+                },
+                "employeeId": {
+                    "allowNull": true,
+                    "field": "employee_id",
+                    "seqType": "Sequelize.INTEGER"
+                },
+                "createdAt": {
+                    "allowNull": false,
+                    "field": "created_at",
+                    "seqType": "Sequelize.DATE"
+                },
+                "updatedAt": {
+                    "allowNull": false,
+                    "field": "updated_at",
+                    "seqType": "Sequelize.DATE"
+                }
+            },
+            "indexes": []
+        }
+    },
+    "path": "/home/muhammad/V/backend_assessment/backend/social/db/migrations/_current.json",
+    "backupPath": "/home/muhammad/V/backend_assessment/backend/social/db/migrations/_current_bak.json",
+    "exists": false,
+    "revision": 1
+}

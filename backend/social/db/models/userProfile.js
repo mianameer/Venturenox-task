@@ -60,6 +60,7 @@ module.exports = function userProfile(sequelize, DataTypes) {
     {
       sequelize,
       tableName: "user_profiles",
+      underscored: true
     }
   );
 };

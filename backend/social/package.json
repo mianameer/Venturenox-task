@@ -5,10 +5,8 @@
 	"main": "app.js",
 	"scripts": {
 		"start": "node app.js",
-		"migrate": "sequelize db:migrate --config db/config/config.js",
-		"makemigrate": "knex --knexfile=./database/knexfile.js migrate:make",
-		"makeseed": "knex --knexfile=./database/knexfile.js seed:make",
-		"seed": "knex seed:run",
+		"migrate": "sequelize-cli db:migrate",
+		"makemigrate": "sequelize-mig migration:make -n",
 		"lint": "eslint '**/*.js'"
 	},
 	"author": "",
@@ -23,8 +21,8 @@
 		"objection": "^2.2.15",
 		"pg": "^8.11.3",
 		"sequelize": "^6.33.0",
-		"sequelize-auto-migrations": "^1.0.3",
-		"sequelize-cli": "^6.6.1"
+		"sequelize-cli": "^6.6.1",
+		"sequelize-mig": "^3.1.3"
 	},
 	"devDependencies": {
 		"eslint": "^7.18.0",

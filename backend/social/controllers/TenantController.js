@@ -1,5 +1,4 @@
 const db = require("../db/models");
-const processMessage = require("../utilities/StreamManager")
 const {
     tenantValidationSchema,
 } = require("../validation/tenantProfile");
@@ -36,7 +35,6 @@ const createTenant = async (req, res) => {
     if (error) {
       return res.status(400).json({ error: error.details[0].message });
     }
-    // processMessage(value)
     const newTenant = await db.TenantProfile.create(value);
     return res.status(200).json(newTenant);
   } catch (err) {
